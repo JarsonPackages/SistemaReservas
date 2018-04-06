@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Professor/Views/Shared/_Layout.cshtml";
+}
+
+<div class="tabbable tab-left">
+    <ul class="nav nav-tabs">
+        <!-- Cria um menu de navegação com borda inferior. nav cria a estilização e nav-tabs faz ficar na horizontal ao inves da vertical. -->
+     
+        <li class="active"  ><a href="#tab1" data-toggle="tab">Itens</a></li>
+        <li><a href="#tab2" data-toggle="tab">Data</a></li>
+
+
+    </ul>
+    <div class="tab-content">
+
+        <div class="tab-pane active  " id="tab1">
+            @RenderPage("SelectItens.cshtml")
+        </div>
+        <div class="tab-pane" id="tab2">
+            @RenderPage("SelectDia.cshtml")
+        </div>
+
+    </div>
+</div>
