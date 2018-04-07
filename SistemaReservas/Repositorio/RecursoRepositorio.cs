@@ -1,10 +1,9 @@
 ﻿using SistemaReservas.Infra;
 using SistemaReservas.Repositorio.Core;
 using Dapper;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+
 using SistemaReservas.Models;
 
 namespace SistemaReservas.Respositorio

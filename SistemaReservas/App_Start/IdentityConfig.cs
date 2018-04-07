@@ -4,7 +4,6 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using System;
-using System.Configuration;
 using System.Security.Claims;
 using System.Threading.Tasks;
 

@@ -46,6 +46,7 @@ namespace SistemaReservas.Respositorio
         {
             using (var db = _db.getCon())
             {
+                
                 string sql = string.Format(@"delete from ItensReserva where ID = {0}", item.ID);
                 db.Query<ItensReserva>(sql);
             }
