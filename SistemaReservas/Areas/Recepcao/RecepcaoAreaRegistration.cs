@@ -17,7 +17,7 @@ namespace SistemaReservas.Areas.Recepcao
             context.MapRoute(
                 "Recepcao_default",
                 "Recepcao/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Reservas", id = UrlParameter.Optional }
             );
         }
     }

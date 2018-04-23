@@ -19,23 +19,24 @@ namespace SistemaReservas
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-           
 
             bundles.Add(new ScriptBundle("~/bundles/Admin").Include(
                    "~/Scripts/ace-elements.min.js" ,
                       "~/Scripts/jquery-2.1.4.min.js",
                    "~/Scripts/ace.min.js",
+                   
                    "~/Scripts/jquery-2.1.4.min.js",
                      "~/Scripts/Professor.js"));
 
           
+
+
             bundles.Add(new StyleBundle("~/Content/bootv4/css").Include(
                  "~/Content/bootv4/bootstrapv4.min.css",
                    "~/Content/bootv4/font-awesome.min.css",
                      "~/Content/bootv4/FooterForm.css",
                       "~/Content/bootv4/sb-admin.css"));
-
-
+          
             bundles.Add(new StyleBundle("~/Content/template").Include(
                  "~/Content/ace-part2.min.css",
                    "~/Content/ace-rtl.min.css",

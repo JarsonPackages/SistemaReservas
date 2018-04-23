@@ -216,10 +216,8 @@
     <Content Include="Areas\Professor\Views\web.config" />
     <Content Include="Areas\Professor\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Apoio\Views\web.config" />
-    <Content Include="Areas\Apoio\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Recepcao\Views\web.config" />
     <Content Include="Areas\Recepcao\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Recepcao\Views\Home\Index.cshtml" />
     <Content Include="Areas\Professor\Views\Home\Index.cshtml" />
     <Content Include="Areas\Professor\Views\Home\SelectDia.cshtml" />
     <Content Include="Areas\Professor\Views\Home\SelectItens.cshtml" />
@@ -236,6 +234,11 @@
     <Content Include="Areas\Apoio\Views\Home\Equipamentos.cshtml" />
     <Content Include="Areas\Apoio\Views\Home\Reservas.cshtml" />
     <Content Include="Areas\Apoio\Views\Home\DetalhesReservas.cshtml" />
+    <Content Include="Areas\Recepcao\Views\Home\DetalhesReservas.cshtml" />
+    <Content Include="Areas\Recepcao\Views\Home\Equipamentos.cshtml" />
+    <Content Include="Areas\Recepcao\Views\Home\Reservas.cshtml" />
+    <Content Include="Areas\Apoio\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Apoio\Views\Home\NovoRecurso.cshtml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />

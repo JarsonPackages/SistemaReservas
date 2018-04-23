@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace SistemaReservas.Areas.Apoio.Controllers
 {
+
     public class HomeController : Controller
     {
         List<Recurso> GetRecursoAll = new List<Recurso>()
@@ -125,7 +126,7 @@ namespace SistemaReservas.Areas.Apoio.Controllers
         public ActionResult DetalhesReservas(int id)
         {
             Reserva get = new Reserva();
-           foreach(Reserva r in GetReservaAll)
+            foreach (Reserva r in GetReservaAll)
             {
                 if (r.ID == id)
                 {
@@ -134,6 +135,16 @@ namespace SistemaReservas.Areas.Apoio.Controllers
             }
             return View(get);
         }
-
+        public ActionResult NovoRecurso()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult NovoRecurso(Recurso _recurso )
+        {
+            return RedirectToAction("Reservas");
+        }
     }
+
 }

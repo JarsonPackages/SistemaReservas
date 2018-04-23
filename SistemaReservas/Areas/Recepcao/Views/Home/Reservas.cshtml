@@ -2,7 +2,8 @@
 
 @{
     ViewBag.Title = "Reservas";
-    Layout = "~/Areas/Apoio/Views/Shared/_Layout.cshtml";
+    Layout = "~/Areas/Recepcao/Views/Shared/_Layout.cshtml";
+
 
 }
 
@@ -49,10 +50,8 @@
                     @Html.DisplayFor(modelItem => item.ID_Usuario)
                 </td>
                 <td>
-
-                    <a href="@Url.Action("DetalhesReservas/"+item.ID)" class="btn btn-info btn-xs"> <i class="ace-icon fa fa-pencil bigger-120"></i> Detalhes</a>
-                    <a href="@Url.Action("DetalhesReservas/"+item.ID)" class="btn btn-warning btn-xs"> <i class="ace-icon fa fa-pencil bigger-120"></i> Editar</a>
-                    <a href="@Url.Action("DetalhesReservas/"+item.ID)" class="btn btn-danger btn-xs"> <i class="ace-icon fa fa-pencil bigger-120"></i> Excluir</a>
+                   
+                    <a href="@Url.Action("DetalhesReservas/"+item.ID)" class="btn btn-info btn-xs" > <i class="ace-icon fa fa-pencil bigger-120"></i> Detalhes</a>
                 </td>
             </tr>
         }
