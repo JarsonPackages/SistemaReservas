@@ -7,10 +7,10 @@
 
 <h2>NovoRecurso</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Recurso</h4>
         <hr />
@@ -34,19 +34,39 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Disponivel, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Disponivel, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="col-xs-3">
+                    <label>
+                        <input name="Disponivel" class="ace ace-switch ace-switch-5" type="checkbox">
+                        <span class="lbl"></span>
+                    </label>
+                </div>
                 @Html.ValidationMessageFor(model => model.Disponivel, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Quantidade, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Quantidade, new { htmlAttributes = new { @class = "form-control" } })
+            <div class="col-md-2">
+
+
+
+
+
+                <div class="input-group">
+                    <div class="spinbox-buttons input-group-btn">
+                        <button type="button" class="btn spinbox-down btn-lg btn-purple" onclick="Diminuir()" >
+                            <i class="icon-only  ace-icon ace-icon fa fa-minus"></i>
+                        </button>
+                    </div><input type="text" class="input-lg spinbox-input form-control text-center" id="Quant" name="Quantidade" value="0">
+                    <div class="spinbox-buttons input-group-btn">
+                        <button type="button" class="btn spinbox-up btn-lg btn-purple" onclick="Adc()">
+                            <i class="icon-only  ace-icon ace-icon fa fa-plus"></i>
+                        </button>
+                    </div>
+                </div>              
                 @Html.ValidationMessageFor(model => model.Quantidade, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.Marca, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -66,19 +86,50 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ID_Tipo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ID_Tipo, new { htmlAttributes = new { @class = "form-control" } })
+                <select name="ID_Tipo" class="form-control">
+                    <option value="2">Nome - Quantidade</option>
+                    <option value="2">Nome - Quantidade</option>
+                    <option value="2">Nome - Quantidade</option>
+                    <option value="2">Nome - Quantidade</option>
+                    <option value="2">Nome - Quantidade</option>
+                    <option value="2">Nome - Quantidade</option>
+                    <option value="2">Nome - Quantidade</option>
+                    <option value="2">Nome - Quantidade</option>
+                    <option value="2">Nome - Quantidade</option>
+                </select>
                 @Html.ValidationMessageFor(model => model.ID_Tipo, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                @Html.ActionLink("Voltar para lista", "Equipamentos",new { }, new { @class = "btn btn-default" })
+                <input type="submit" value="Create" class="btn btn-success" />
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
+
+<script>
+
+    function Adc() {
+        var valor = document.getElementById("Quant");
+        var valor2 =parseFloat( valor.value);
+        valor2 = valor2 + 1;
+        document.getElementById("Quant").value = valor2;
+       
+    }
+    function Diminuir() {
+        var valor = document.getElementById("Quant");
+        var valor2 = parseFloat(valor.value);
+        if (valor2 > 0) {
+            valor2 = valor2 - 1;
+            document.getElementById("Quant").value = valor2;
+        }
+       
+
+    }
+
+</script>
