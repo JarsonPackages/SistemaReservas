@@ -17,7 +17,7 @@ namespace SistemaReservas.Areas.Apoio
             context.MapRoute(
                 "Apoio_default",
                 "Apoio/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Reservas", id = UrlParameter.Optional }
             );
         }
     }

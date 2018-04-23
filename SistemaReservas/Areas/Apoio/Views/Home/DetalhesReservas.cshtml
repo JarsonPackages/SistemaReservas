@@ -1,0 +1,57 @@
+﻿@model SistemaReservas.Models.Reserva
+@{
+
+    Layout = "~/Areas/Apoio/Views/Shared/_Layout.cshtml";
+
+}
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-offset-3 col-md-7 jumbotron ">
+                <div class="panel panel-default ">
+                    <div class="panel-heading">
+                        <h2>Sobre </h2>
+                    </div>
+                    <div class="panel-body">
+
+                        <h3>  @Html.DisplayNameFor(model => model.DataInicial) :  @Html.DisplayFor(model => model.DataInicial)</h3>
+
+
+                        <br />
+
+                        <h3>
+                            @Html.DisplayNameFor(model => model.DataFinal) :    @Html.DisplayFor(model => model.DataFinal)
+                        </h3>
+
+
+                        <br />
+
+                        <h3>
+                            @Html.DisplayNameFor(model => model.HoraInicial) :  @Html.DisplayFor(model => model.HoraInicial)
+                        </h3>
+
+
+                        <br />
+
+                        <h3>
+                            @Html.DisplayNameFor(model => model.HoraFinal) :  @Html.DisplayFor(model => model.HoraFinal)
+                        </h3>
+
+
+                        <br />
+
+                        <h3>
+                            @Html.DisplayNameFor(model => model.ID_Usuario) :   @Html.DisplayFor(model => model.ID_Usuario)
+                        </h3>
+
+
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

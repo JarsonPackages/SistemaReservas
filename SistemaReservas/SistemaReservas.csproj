@@ -21,6 +21,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -184,17 +185,21 @@
     <Content Include="bin\System.Web.WebPages.Razor.xml" />
     <Content Include="bin\System.Web.WebPages.xml" />
     <Content Include="bin\WebGrease.dll" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\ace-part2.min.css" />
+    <Content Include="Content\ace-rtl.min.css" />
+    <Content Include="Content\ace-skins.min.css" />
+    <Content Include="Content\ace.min.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootv4\bootstrapv4.min.css" />
     <Content Include="Content\bootv4\font-awesome.min.css" />
     <Content Include="Content\bootv4\FooterForm.css" />
     <Content Include="Content\bootv4\sb-admin.css" />
     <Content Include="Content\Componentes.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\fonts.googleapis.com.css" />
     <Content Include="Content\Img\logo.png" />
     <Content Include="Content\Site.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Icon.png" />
@@ -202,14 +207,9 @@
     <Content Include="obj\Debug\SistemaReservas.dll" />
     <Content Include="obj\Debug\SistemaReservas.pdb" />
     <Content Include="packages.config" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\ace-elements.min.js" />
+    <Content Include="Scripts\ace-extra.min.js" />
+    <Content Include="Scripts\ace.min.js" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\SistemaReservas.csprojResolveAssemblyReference.cache" />
     <Content Include="bin\SistemaReservas.dll.config" />
@@ -217,7 +217,6 @@
     <Content Include="Areas\Professor\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Apoio\Views\web.config" />
     <Content Include="Areas\Apoio\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Apoio\Views\Home\Index.cshtml" />
     <Content Include="Areas\Recepcao\Views\web.config" />
     <Content Include="Areas\Recepcao\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Recepcao\Views\Home\Index.cshtml" />
@@ -226,9 +225,22 @@
     <Content Include="Areas\Professor\Views\Home\SelectItens.cshtml" />
     <Content Include="Areas\Professor\Views\Shared\MenuIndex.cshtml" />
     <Content Include="Areas\Professor\Views\Shared\MenuSide.cshtml" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Apoio\Views\Home\Equipamentos.cshtml" />
+    <Content Include="Areas\Apoio\Views\Home\Reservas.cshtml" />
+    <Content Include="Areas\Apoio\Views\Home\DetalhesReservas.cshtml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />
     <Content Include="Scripts\jquery-2.1.3.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
     <Content Include="Scripts\npm.js" />

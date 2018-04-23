@@ -1,0 +1,89 @@
+﻿@model IEnumerable<SistemaReservas.Models.Recurso>
+
+@{
+    ViewBag.Title = "Equipamentos";
+    Layout = "~/Areas/Apoio/Views/Shared/_Layout.cshtml";
+}
+<h3>Lista de Equipamentos</h3>
+
+<table id="simple-table" class="table  table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disponivel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_Tipo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td align="center">
+                    @if (item.Disponivel.Equals("Sim"))
+                    {
+                        <span class="label label-sm label-success">@item.Disponivel</span>
+                    }
+                    else
+                    {
+                        <span class="label label-sm label-danger">@item.Disponivel</span>
+                    }
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Modelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID_Tipo)
+                </td>
+                <td>
+                    <a class="btn btn-xs btn-info" href="@Url.Action("Details/"+item.ID)">
+                        <i class="ace-icon fa fa-pencil bigger-120"></i>
+                        Detalhes
+                    </a>
+                   
+
+
+
+                </td>
+                
+            </tr>
+           
+            
+        }
+
+    </tbody>
+
+</table>
+
