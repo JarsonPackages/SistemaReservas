@@ -13,6 +13,10 @@ namespace SistemaReservas.Areas.Professor.Controllers
         {
             return View();
         }
+        public PartialViewResult SelecionaDia()
+        {
+            return PartialView();
+        }
         
 
     }

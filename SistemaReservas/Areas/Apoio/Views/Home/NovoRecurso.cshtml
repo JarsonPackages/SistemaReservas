@@ -86,17 +86,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ID_Tipo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <select name="ID_Tipo" class="form-control">
-                    <option value="2">Nome - Quantidade</option>
-                    <option value="2">Nome - Quantidade</option>
-                    <option value="2">Nome - Quantidade</option>
-                    <option value="2">Nome - Quantidade</option>
-                    <option value="2">Nome - Quantidade</option>
-                    <option value="2">Nome - Quantidade</option>
-                    <option value="2">Nome - Quantidade</option>
-                    <option value="2">Nome - Quantidade</option>
-                    <option value="2">Nome - Quantidade</option>
-                </select>
+              @Html.DropDownListFor(model=>model.ID_Tipo, new SelectList(ViewBag.Tipos, "Id", "Nome"), new {@class="form-control" })
                 @Html.ValidationMessageFor(model => model.ID_Tipo, "", new { @class = "text-danger" })
             </div>
         </div>

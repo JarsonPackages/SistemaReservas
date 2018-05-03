@@ -137,6 +137,27 @@ namespace SistemaReservas.Areas.Apoio.Controllers
         }
         public ActionResult NovoRecurso()
         {
+            ViewBag.Tipos = new List<TipoRecurso>
+            {
+                new TipoRecurso()
+                {
+                    ID=1,
+                    Nome="Cabo HDMI",
+                    Quantidade = 4
+                },
+                 new TipoRecurso()
+                {
+                    ID=2,
+                    Nome="Caixa de Som",
+                    Quantidade = 1
+                },
+                  new TipoRecurso()
+                {
+                    ID=3,
+                    Nome="DataShow",
+                    Quantidade = 2
+                }
+            };
             return View();
         }
         [HttpPost]

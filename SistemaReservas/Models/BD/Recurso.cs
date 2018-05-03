@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SistemaReservas.Models
 {
-    public class Recurso
+    public  class Recurso
     {
         public int ID { get; set; }
         public string Nome { get; set; }
@@ -18,4 +18,5 @@ namespace SistemaReservas.Models
         [Display(Name = "Tipo da Reserva")]
         public int ID_Tipo { get; set; }
     }
+   
 }

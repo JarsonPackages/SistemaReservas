@@ -4,11 +4,16 @@
     ViewBag.Title = "Equipamentos";
     Layout = "~/Areas/Apoio/Views/Shared/_Layout.cshtml";
 }
+
 <h3>Lista de Equipamentos</h3>
 <p>
-    @Html.ActionLink("Adicionar Equipamento", "NovoRecurso", new { }, new { @class="btn btn-xs btn-success"})
+ 
+
+    @Html.ActionLink("Adicionar Equipamento", "NovoRecurso", new { }, new { @class = "btn btn-xs btn-success" })
 </p>
-<table id="simple-table" class="table  table-bordered table-hover">
+<div id="AjaxSimple">
+</div>
+<table  class="table  table-bordered table-hover">
     <thead>
         <tr>
             <th>
@@ -30,6 +35,7 @@
                 @Html.DisplayNameFor(model => model.Modelo)
             </th>
             <th>
+                
                 @Html.DisplayNameFor(model => model.ID_Tipo)
             </th>
             <th></th>
@@ -67,6 +73,7 @@
                     @Html.DisplayFor(modelItem => item.Modelo)
                 </td>
                 <td>
+
                     @Html.DisplayFor(modelItem => item.ID_Tipo)
                 </td>
                 <td>
@@ -78,10 +85,10 @@
 
 
                 </td>
-                
+
             </tr>
-           
-            
+
+
         }
 
     </tbody>

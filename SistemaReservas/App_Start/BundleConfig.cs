@@ -25,7 +25,7 @@ namespace SistemaReservas
                       "~/Scripts/jquery-2.1.4.min.js",
                    "~/Scripts/ace.min.js",
                    
-                   "~/Scripts/jquery-2.1.4.min.js",
+                  
                      "~/Scripts/Professor.js"));
 
           

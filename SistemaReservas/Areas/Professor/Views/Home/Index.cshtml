@@ -4,23 +4,27 @@
     Layout = "~/Areas/Professor/Views/Shared/_Layout.cshtml";
 }
 
-<div class="tabbable tab-left">
-    <ul class="nav nav-tabs">
-        <!-- Cria um menu de navegação com borda inferior. nav cria a estilização e nav-tabs faz ficar na horizontal ao inves da vertical. -->
-     
-        <li class="active"  ><a href="#tab1" data-toggle="tab">Itens</a></li>
-        <li><a href="#tab2" data-toggle="tab">Data</a></li>
+<div class="tab-pane">
+    @RenderPage("Selectitens.cshtml")
+</div>
 
 
-    </ul>
-    <div class="tab-content">
+<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+    $('#clicka').click(function () {
+      
+        $.ajax({
+            url: 'http://localhost:6067/Professor/Home/SelecionaDia',
+            contentType: 'application/html; charset=utf-8',
+            type: 'GET',
+            dataType: 'html'
+        })
+            .success(function (result) {
+                $('#SelectDias').html(result);
+            });
+    });
+</script>
 
-        <div class="tab-pane active  " id="tab1">
-            @RenderPage("SelectItens.cshtml")
-        </div>
-        <div class="tab-pane" id="tab2">
-            @RenderPage("SelectDia.cshtml")
-        </div>
+<div class="tab-pane" id="SelectDias">
 
-    </div>
 </div>
