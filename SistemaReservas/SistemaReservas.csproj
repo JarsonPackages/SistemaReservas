@@ -279,6 +279,8 @@
     <Content Include="Views\Shared\Menu.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Areas\Professor\Views\Home\SelecionaDia.cshtml" />
+    <Content Include="Areas\Apoio\Views\Home\EditarReserva.cshtml" />
+    <Content Include="Areas\Apoio\Views\Home\NovaReserva.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

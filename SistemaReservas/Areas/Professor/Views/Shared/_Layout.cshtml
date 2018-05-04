@@ -7,7 +7,7 @@
     <!-- bootstrap & fontawesome -->
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
-
+    <link href="~/Content/css/select2.min.css" rel="stylesheet" />
 
 
     <!-- page specific plugin styles -->
@@ -79,7 +79,7 @@
 
             <ul class="nav nav-list">
                 <li class="">
-                    <a href="#">
+                    <a href="@Url.Action("">
                         <i class="menu-icon fa fa-tachometer"></i>
                         <span class="menu-text"> Home </span>
 
@@ -147,5 +147,13 @@
 
     @Scripts.Render("~/bundles/Admin")
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/i18n/pt-BR.js"></script>
+    <script src="~/Scripts/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').select2();
+        });
+       
+    </script>
 </body>
 </html>

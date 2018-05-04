@@ -77,10 +77,10 @@
                     @Html.DisplayFor(modelItem => item.ID_Tipo)
                 </td>
                 <td>
-                    <a href="@Url.Action("DetalhesReservas/"+item.ID)" class="btn btn-info btn-xs"> <i class="ace-icon fa fa-pencil bigger-120"></i> Detalhes</a>
-                    <a href="@Url.Action("DetalhesReservas/"+item.ID)" class="btn btn-warning btn-xs"> <i class="ace-icon fa fa-pencil bigger-120"></i> Editar</a>
-                    <a href="@Url.Action("DetalhesReservas/"+item.ID)" class="btn btn-danger btn-xs"> <i class="ace-icon fa fa-pencil bigger-120"></i> Excluir</a>
-
+                  
+                    <a href="@Url.Action("DetalhesEquipamentos/"+item.ID)" class="btn btn-info btn-xs"> <i class="ace-icon fa fa-info-circle bigger-120"></i> Detalhes</a>
+                    <a href="@Url.Action("EditarEquipamentos/"+item.ID)" class="btn btn-warning btn-xs"> <i class="ace-icon fa fa-pencil bigger-120"></i> Editar</a>
+                    <a href="@Url.Action("ExcluirEquipamentos/"+item.ID)" class="btn btn-danger btn-xs"> <i class="glyphicon  glyphicon-remove"></i> Excluir</a>
 
 
 

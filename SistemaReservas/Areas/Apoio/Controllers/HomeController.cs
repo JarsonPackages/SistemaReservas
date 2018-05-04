@@ -135,6 +135,28 @@ namespace SistemaReservas.Areas.Apoio.Controllers
             }
             return View(get);
         }
+        public ActionResult EditarReserva(int id)
+        {
+            Reserva get = new Reserva();
+            foreach (Reserva r in GetReservaAll)
+            {
+                if (r.ID == id)
+                {
+                    get = r;
+                }
+            }
+            return View(get);
+        }
+        public ActionResult NovaReserva()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult NovaReserva(Reserva reserva)
+        {
+            return RedirectToAction("Index");
+        }
         public ActionResult NovoRecurso()
         {
             ViewBag.Tipos = new List<TipoRecurso>

@@ -3,11 +3,28 @@
 @{
     ViewBag.Title = "Reservas";
     Layout = "~/Areas/Apoio/Views/Shared/_Layout.cshtml";
+    List<string> listaProf = new List<string>();
+    listaProf.Add("Carlos Andrew Costa Bezerra");
+    listaProf.Add("Andre Rincon");
+    listaProf.Add("Marcelo Shimidt(algo assim)");
+    listaProf.Add("Marcelo Renato");
+    listaProf.Add("Marcia Savoine");
+    listaProf.Add("Katiane");
 
+    listaProf.Add("Jesus");
+    listaProf.Add("Wandersson Rosado");
+    listaProf.Add("Leonardo");
+    listaProf.Add("Professora de Ingles");
+    listaProf.Add("Romualdo");
+    int x = -1;
 }
 
 <h3>Lista de Reservas</h3>
 
+<a href="@Url.Action("NovaReserva")" class="btn btn-info"><i class="glyphicon glyphicon-share-alt"></i> Nova Reserva</a>
+
+<br />
+<br />
 <table id="simple-table" class="table  table-bordered table-hover">
     <thead>
         <tr>
@@ -46,15 +63,19 @@
                     @Html.DisplayFor(modelItem => item.HoraFinal)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ID_Usuario)
+                    @listaProf[x = x+1]
+                  
+
                 </td>
                 <td>
 
-                    <a href="@Url.Action("DetalhesReservas/"+item.ID)" class="btn btn-info btn-xs"> <i class="ace-icon fa fa-pencil bigger-120"></i> Detalhes</a>
-                    <a href="@Url.Action("DetalhesReservas/"+item.ID)" class="btn btn-warning btn-xs"> <i class="ace-icon fa fa-pencil bigger-120"></i> Editar</a>
-                    <a href="@Url.Action("DetalhesReservas/"+item.ID)" class="btn btn-danger btn-xs"> <i class="ace-icon fa fa-pencil bigger-120"></i> Excluir</a>
+                    <a href="@Url.Action("DetalhesReservas/"+item.ID)" class="btn btn-info btn-xs"> <i class="ace-icon fa fa-info-circle bigger-120"></i> Detalhes</a>
+                    <a href="@Url.Action("EditarReservas/"+item.ID)" class="btn btn-warning btn-xs"> <i class="ace-icon fa fa-pencil bigger-120"></i> Editar</a>
+                    <a href="@Url.Action("ExcluirReservas/"+item.ID)" class="btn btn-danger btn-xs"> <i class="glyphicon  glyphicon-remove"></i> Excluir</a>
                 </td>
             </tr>
-        }
+
+        }fa-info-circle
+
     </tbody>
 </table>
